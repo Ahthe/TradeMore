@@ -2,12 +2,12 @@
     export const prerender = true
 </script>
 <script lang="ts">
-	import GameOverView from '../components/GameOverView.svelte'
-	import PlayerHudView from '../components/PlayerHudView.svelte'
-	import StockGraphView from '../components/StockGraphView.svelte'
-	import StockActionBarView from '../components/StockActionBarView.svelte'
+	import GameOverView from '../../components/GameOverView.svelte'
+	import PlayerHudView from '../../components/PlayerHudView.svelte'
+	import StockGraphView from '../../components/StockGraphView.svelte'
+	import StockActionBarView from '../../components/StockActionBarView.svelte'
 	import { onDestroy, onMount } from 'svelte'
-	import { PaperTradingGame, PaperTradingUtils } from '../logic/game'
+	import { PaperTradingGame, PaperTradingUtils } from '../../logic/game'
 	import { writable } from 'svelte/store'
 
 	$: holdsPosition = $game.player.shares > 0
