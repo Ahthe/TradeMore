@@ -1,0 +1,45 @@
+{
+	"extends": "./.svelte-kit/tsconfig.json",
+	"compilerOptions": {
+	  "moduleResolution": "bundler",
+	  "module": "es2020",
+	  "lib": [
+		"es2020"
+	  ],
+	  "types": ["svelte"],
+	  "target": "es2020",
+	  "isolatedModules": true,
+	  "resolveJsonModule": true,
+	  "sourceMap": true,
+	  "esModuleInterop": true,
+	  "skipLibCheck": true,
+	  "forceConsistentCasingInFileNames": true,
+	  "baseUrl": ".",
+	  "allowJs": true,
+	  "checkJs": true,
+	  "strict": true,
+	  "paths": {
+		"$lib/*": [
+		  "src/lib/*"
+		],
+		"$views/*": [
+		  "src/lib/views/*"
+		],
+		"$static/*": [
+		  "static"
+		]
+	  }
+	},
+	"include": [
+	  "src/**/*.d.ts",
+	  "src/**/*.js",
+	  "src/**/*.ts",
+	  "src/**/*.svelte"
+	]
+  
+	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
+	// except $lib which is handled by https://kit.svelte.dev/docs/configuration#files
+	//
+	// If you want to overwrite includes/excludes, make sure to copy over the relevant includes/excludes
+	// from the referenced tsconfig.json - TypeScript does not merge them in
+}
