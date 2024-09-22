@@ -21,7 +21,7 @@
 </script>
 <div
         class="self-stretch flex flex-col -m-1 {cl} {holdsPosition ? 'bg-gradient-to-b' : undefined } from-yellow-50 to-white rounded px-1">
-    <span class='font-semibold text-gray-500'>$PAPER</span>
+    <span class='font-semibold text-gray-500'>$APPLE</span>
     <div class="flex items-start">
         <span class='font-semibold text-4xl tabular-nums'>${formatDollars($animatedTickerPrice)}</span>
         <PriceMovementBadge delta={beanPriceMovementPercentage} class='mt-1'/>
