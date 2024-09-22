@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    button {
+        @apply focus:outline-none focus:ring focus:ring-gray-200
+    }
+
+    button.normal {
+        @apply py-8 px-4 rounded bg-gray-100 font-semibold disabled:text-gray-500 disabled:bg-gray-100  disabled:cursor-not-allowed
+    }
+
+    button.reg {
+        @apply py-3 px-4 rounded bg-primary font-semibold text-black border-2 border-black
+        transition-transform disabled:bg-gray-300  disabled:cursor-not-allowed select-none
+        active:transform active:translate-y-1;
+    }
+
+    a {
+        @apply hover:underline active:underline
+    }
+
+    li a {
+        @apply underline
+    }
+
+    h1 {
+        @apply text-2xl font-bold
+    }
+
+    h2 {
+        @apply text-xl font-bold
+    }
+
+    h3 {
+        @apply text-lg
+    }
+
+    input.reg {
+        @apply border border-gray-500 focus:border-black rounded-md p-2
+    }
+
+    label {
+        @apply text-xs font-semibold mb-1
+    }
+
+    .tag.md {
+        @apply font-semibold bg-gray-100 rounded px-2 py-1 text-xs
+    }
+
+    .tag {
+        @apply font-semibold bg-gray-100 rounded px-1 py-0.5 text-xs
+    }
+
+    .outline {
+        @apply rounded border-2 border-black
+    }
+
+    /* Disable spinner arrows on number inputs */
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
