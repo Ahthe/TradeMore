@@ -11,7 +11,7 @@
         <svg class='inline-block mr-1' height='16' width='16'>
             <circle cx='8' cy='8' fill='#ffd803' r='6' stroke='black' stroke-width='2' />
         </svg>
-        <span class='inline-block '>BeRich</span>
+        <span class='inline-block '>Trade More</span>
     </a>
     {#if subPath}
         <ChevronRight class='ml-2' />
