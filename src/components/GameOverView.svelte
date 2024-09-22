@@ -1,12 +1,12 @@
 <script>
-    import { formatDollars } from 'src/utils/strings'
+    import { formatDollars } from '../utils/strings'
     import { fly } from 'svelte/transition'
     import CheckoutOtherProjects from './CheckoutOtherProjects.svelte'
 
     export let score
     let cl
     export { cl as class }
-    const github = 'https://github.com/davjhan/paper-trader-game'
+    const github = 'https://github.com/ahthe/BeRich'
 </script>
 <svelte:head>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -21,6 +21,6 @@
         <!-- Place this tag where you want the button to render. -->
         <!-- Place this tag where you want the button to render. -->
         <a class="github-button" href={github}  data-show-count="true"
-           aria-label="Star davjhan/guess-the-year-game on GitHub">Star</a>
+           aria-label="Star BeRich on GitHub">Star</a>
     </div>
 </div>

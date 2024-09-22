@@ -1,9 +1,9 @@
 <script>
-    import AddAlt from 'carbon-icons-svelte/lib/AddAlt20'
-    import SubtractAlt from 'carbon-icons-svelte/lib/SubtractAlt20'
+    import AddAlt from "carbon-icons-svelte/lib/AddAlt.svelte";
+    import SubtractAlt from "carbon-icons-svelte/lib/SubtractAlt.svelte";
     import { PaperTradingGame, PaperTradingUtils } from '../logic/game'
     import { flash } from '../logic/utils'
-    import { formatDollars } from 'src/utils/strings'
+    import { formatDollars } from '../utils/strings'
 
     import PriceMovementBadge from './PriceMovementBadge.svelte'
 
@@ -17,20 +17,20 @@
     <div class="flex flex-col">
         <span class='text-xs text-gray-500'>Shares owned</span>
         {#key $game.player.shares }
-            <span class=' tabular-nums rounded' in:flash>{$game.player.shares.toFixed(2)}</span>
+        <span class=' tabular-nums rounded' in:flash={{}}>{$game.player.shares.toFixed(2)}</span>
         {/key}
     </div>
     <div class="ml-4 flex flex-col w-24">
         <span class='text-xs text-gray-500'>Cost basis</span>
         {#key $game.player.costBasis }
-        <span class=' tabular-nums rounded ' in:flash>
-                {#if $game.player.costBasis}
-                     ${formatDollars($game.player.costBasis)}
-                    {:else}
-                    --
-                {/if}
+        <span class=' tabular-nums rounded ' in:flash={{}}>
+            {#if $game.player.costBasis}
+                 ${formatDollars($game.player.costBasis)}
+                {:else}
+                --
+            {/if}
 
-            </span>
+        </span>
         {/key}
         {#if $game.player.costBasis}
             <PriceMovementBadge delta={deltaCostBasis} xs={true} class='-mt-1 -ml-1'/>

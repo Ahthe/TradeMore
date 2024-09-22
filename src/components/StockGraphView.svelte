@@ -1,13 +1,15 @@
-<script>
-    import { formatDollars } from 'src/utils/strings'
+<script lang="ts">
+    import { formatDollars } from '../utils/strings'
     import { tweened } from 'svelte/motion'
     import { PaperTradingUtils } from '../logic/game'
     import { numberEasingProps } from '../logic/utils'
     import PriceMovementBadge from './PriceMovementBadge.svelte'
     import StockChart from './StockChart.svelte'
 
-    export let priceData = [], tick = priceData.length - 1, holdsPosition = false
-    let cl
+    export let priceData: number[] = []
+    export let tick = priceData.length - 1
+    export let holdsPosition = false
+    let cl: string
     export { cl as class }
 
     $: beanPriceMovementPercentage = PaperTradingUtils.priceMovementPercentage({ priceData, tick })
@@ -25,5 +27,5 @@
         <PriceMovementBadge delta={beanPriceMovementPercentage} class='mt-1'/>
     </div>
 
-    <StockChart {priceData} {tick} {holdsPosition}/>
+    <StockChart {priceData} {tick} {holdsPosition} class=""/>
 </div>

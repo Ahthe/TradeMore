@@ -4,7 +4,7 @@
 	import type { BeanCoinGameState } from '../logic/game'
 	import { PaperTradingUtils } from '../logic/game'
 	import { numberEasingProps } from '../logic/utils'
-	import { formatDollars } from 'src/utils/strings'
+	import { formatDollars } from '../utils/strings'
 	import PriceMovementBadge from './PriceMovementBadge.svelte'
 	import { flash } from '../logic/utils'
 

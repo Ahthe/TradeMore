@@ -1,7 +1,6 @@
 <script>
-    import CaretDown from 'carbon-icons-svelte/lib/CaretDown20'
-    import CaretUp from 'carbon-icons-svelte/lib/CaretUp20'
-    import CaretUpGlyph from "carbon-icons-svelte/lib/CaretUpGlyph";
+    import CaretDown from 'carbon-icons-svelte/lib/CaretDown.svelte'
+    import CaretUp from "carbon-icons-svelte/lib/CaretUp.svelte";
     export let delta, xs=false
     let cl
     export {cl as class}
